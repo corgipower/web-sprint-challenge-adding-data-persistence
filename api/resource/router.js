@@ -16,7 +16,7 @@ router.get('/api/resources', async (req, res, next) => {
 
 router.post('/api/resources', async (req, res, next) => {
     try {
-        Resource.add(req.body);
+        await Resource.add(req.body);
         res.status(201).json(req.body);
     }
     catch (err) {
